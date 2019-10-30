@@ -1,0 +1,26 @@
+<h1>Players</h1>
+
+<p *ngIf="!data"><em>Loading...</em></p>
+
+<table class='table table-striped' aria-labelledby="tableLabel" *ngIf="data">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Birthday</th>
+      <th>Born</th>
+      <th>Weight</th>
+      <th>Height</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let player of data.players">
+      <td>{{ player.name }}</td>
+      <td>{{ player.birthDate }}</td>
+      <td>{{ player.birthPlace }}</td>
+      <td>{{ player.weightLbs }}</td>
+      <td>{{ player.height }}</td>
+    </tr>
+  </tbody>
+</table>
+
+
